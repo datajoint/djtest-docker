@@ -2,12 +2,26 @@
 
 A base docker image for running tests related to DataJoint.
 
+# Features
+
+- Adds testing libraries:
+  - nose
+  - nose-cov
+  - coveralls
+  - flake8
+- Applies image compresssion
+
 # Launch locally
 
+```shell
+docker-compose -f dist/alpine/docker-compose.yml --env-file config/.env up --build
+```
 
-`docker-compose -f dist/alpine/docker-compose.yml --env-file config/.env up --build`
 OR
-`docker-compose -f dist/debian/docker-compose.yml --env-file config/.env up --build`
+
+```shell
+docker-compose -f dist/debian/docker-compose.yml --env-file config/.env up --build
+```
 
 
 # Notes
